@@ -7,8 +7,10 @@ FROM base as build
 RUN mkdir /fc
 WORKDIR /fc
 
+ENV FAIRCAMP_VER=0.11.0
+
 RUN apt-get install curl -y
-RUN curl -O https://simonrepp.com/faircamp/packages/faircamp_0.11.0-1+deb12_amd64.deb
+RUN curl -O https://simonrepp.com/faircamp/packages/faircamp_$FAIRCAMP_VER-1+deb12_amd64.deb
 
 FROM base as final
 

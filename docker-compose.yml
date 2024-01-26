@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  faircamp:
+    image: httpd:alpine
+    volumes:
+      ./data/.faircamp_build:/usr/local/apache2/htdocs/
+    ports:
+      8080:80

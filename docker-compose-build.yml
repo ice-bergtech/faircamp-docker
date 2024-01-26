@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  faircamp:
+    build:
+      context: .
+    command: faircamp n3wjack/faircamp --build-dir .faircamp_build_browsable --no-clean-urls && faircamp n3wjack/faircamp
+    volumes:
+      ./data:/data
